@@ -15,7 +15,7 @@ public class program {
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("твое имя , чувак: ");
         String name = iScanner.nextLine();
-        System.out.printf("Привет, "+ name);
+        System.out.printf("Привет, %s!", name);
         iScanner.close();
     }
 }
