@@ -5,43 +5,42 @@ import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import javax.swing.BoundedRangeModel;
 
 import java.util.Random;
 
 public class program {
     public static void main(String[] args) {
-        // System.out.println("Hello");
-        // int newClock = LocalTime.now().getHour();
-        // int newMinute = LocalTime.now().getMinute();
-        // newClock =18;
-        // // System.out.println(LocalDateTime.now().getYear());
-        // System.out.println(newClock);
-        // String timePeriod = null;
-        // if (newClock >= 5 && newClock <=11 && newMinute <= 59)  timePeriod = "Доброе утро";
-        // if (newClock >= 12 && newClock <=17 && newMinute <= 59)  timePeriod = "Добрый день";
-        // if (newClock >= 18 && newClock <=22 && newMinute <= 59)  timePeriod = "Добрый вечер";
-        // if (newClock == 23 && newMinute <= 59)  timePeriod = "Доброй ночи";
-        // if (newClock >= 0 & newClock <=4 & newMinute <= 59)  timePeriod = "Доброй ночи";
-        // Scanner iScanner = new Scanner(System.in);
-        // System.out.printf("твое имя , чувак: ");
-        // String name = iScanner.nextLine();
-        // System.out.printf("%s, %s!", timePeriod, name);
-        // iScanner.close();
-        // int [] arr = {1,1,1,1,0,0,1,1,1,0,1,1,1,1,0};
-        // System.out.println(Arrays.toString(arr));
-        // int maxCount = 0;
-        // int count = 0;
-        // for (int index = 0; index < arr.length; index++) {
-        //     if (arr[index]==1) {
-        //         count ++;
-        //         if (maxCount<count) maxCount=count;
-        //     }
-        //     else { 
-        //         count =0;
-        //     }
-        // }
-        // System.out.print(maxCount);
+        System.out.println("Hello");
+        int newClock = LocalTime.now().getHour();
+        int newMinute = LocalTime.now().getMinute();
+        newClock =18;
+        // System.out.println(LocalDateTime.now().getYear());
+        System.out.println(newClock);
+        String timePeriod = null;
+        if (newClock >= 5 && newClock <=11 && newMinute <= 59)  timePeriod = "Доброе утро";
+        if (newClock >= 12 && newClock <=17 && newMinute <= 59)  timePeriod = "Добрый день";
+        if (newClock >= 18 && newClock <=22 && newMinute <= 59)  timePeriod = "Добрый вечер";
+        if (newClock == 23 && newMinute <= 59)  timePeriod = "Доброй ночи";
+        if (newClock >= 0 & newClock <=4 & newMinute <= 59)  timePeriod = "Доброй ночи";
+        Scanner iScanner = new Scanner(System.in);
+        System.out.printf("твое имя , чувак: ");
+        String name = iScanner.nextLine();
+        System.out.printf("%s, %s!", timePeriod, name);
+        iScanner.close();
+        int [] arr = {1,1,1,1,0,0,1,1,1,0,1,1,1,1,0};
+        System.out.println(Arrays.toString(arr));
+        int maxCount = 0;
+        int count = 0;
+        for (int index = 0; index < arr.length; index++) {
+            if (arr[index]==1) {
+                count ++;
+                if (maxCount<count) maxCount=count;
+            }
+            else { 
+                count =0;
+            }
+        }
+        System.out.print(maxCount);
         Random random = new Random();
         Scanner iScanner = new Scanner(System.in);
         System.out.print("введи размер массива: ");
@@ -69,6 +68,7 @@ public class program {
         countC++;
         }
         System.out.println(Arrays.toString(arr));
+        
         iScanner.close();
     }
 }
