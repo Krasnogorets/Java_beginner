@@ -135,11 +135,15 @@ public class hw1 {
         //  например 2?+?5=69. Требуется восстановить выражение до верного равенства. 
         // Предложить хотя бы одно решение или сообщить, что его нет.
         Scanner iScanner = new Scanner(System.in);
-        System.out.print("введите выражение q + w = e , при этом q,w,e любой разрядности и q,w могут содержать по одной пропущенной цифре, замененной на ? или даже q=? b w=?: ");
+        System.out.println("введите выражение q + w = e , при этом q,w,e любой разрядности  ");
+        System.out.println("и q,w могут содержать по одной пропущенной цифре, замененной на ? ");
+        System.out.println("или даже q=? и w=?, при условии, что они одноразрядны:");
         String inputString = iScanner.nextLine();
         String[] tempString = inputString.split("[+//=]+");
         int result = Integer.parseInt(tempString[2]);
         convertAndCheck(tempString[0], tempString[1],result);
+        
+        
 
         iScanner.close();
     }
