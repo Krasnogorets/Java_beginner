@@ -6,13 +6,14 @@ public class task4_add {
         int longestPrefix = 0;
         int commonPrefixLen = 0;
         String result = "";
-        String[] result1 = new String[2];
-
+        String[] result1 = new String[3];
+        String longestString="";
         for (String string1 : temp) {
-
+            
             for (int index = string1.length(); index >= 0; index--) {
                 String tempstring4 = string1.substring(0, index);
                 int stringCount = 0;
+                
                 for (String string2 : temp) {
                     for (int index2 = string2.length(); index2 >= 0; index2--) {
                         String tempstring5 = string2.substring(0, index2);
@@ -21,6 +22,10 @@ public class task4_add {
                             stringCount++;
                             if (stringCount == m) {
                                 commonPrefixLen = index;
+                                if (string1.length()>longestString.length()){
+                                    longestString=string1;
+                                }
+
                                 if (longestPrefix < commonPrefixLen) {
                                     longestPrefix = commonPrefixLen;
                                     result = tempstring4;
@@ -33,9 +38,14 @@ public class task4_add {
 
             }
         }
-        result1[0] = result;
-        result1[1] = Integer.toString(longestPrefix);
-        return result1;// возвращаю и общий префикс и размер
+        result1[1] = result;
+        result1[2] = Integer.toString(longestPrefix);
+        if (result == ""){
+            result1[0] ="";
+        } 
+        else{
+            result1[0] = longestString;}
+        return result1;// возвращаю наибольшую строку с общим префиксом, общий префикс и длину префикса
     }
 
     public static void main(String[] args) throws Exception {
@@ -44,7 +54,7 @@ public class task4_add {
         // String test = "написать метод, который находит самую длинную стр "
         // + " среди массива стро, префикса если общего нет, вернуть пустую строку";
 
-        String test = "geek geekbrains geero ge";
+        String test = "geek geekbrains geero ge geekbrainstry into";
         String[] tempString = test.split("[ ,]+");
         Arrays.sort(tempString);
         Scanner iScanner = new Scanner(System.in);
@@ -55,9 +65,10 @@ public class task4_add {
             m = tempString.length;
         }
         else {
-            m=2;
+            m=n;
         }
-        System.out.printf(Arrays.toString(findPrefix(tempString, m))); // вывожу и общий префикс и его длину
+        System.out.printf(Arrays.toString(findPrefix(tempString, m))); // вывожу наибольшую строку 
+        //с общим префиксом, общий префикс и длину префикса
         iScanner.close();
 
     }
