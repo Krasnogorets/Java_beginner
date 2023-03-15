@@ -1,4 +1,4 @@
-package programs;
+
 import java.util.Scanner;
 
 public class HW1_task6_add {
