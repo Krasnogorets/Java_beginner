@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.logging.*;
@@ -30,6 +30,7 @@ public class Task3 {
                 if(arg2==0){
                     logging("делить на 0 нельзя");
                     System.out.println("делить на 0 нельзя");
+                    myStack.add(null);
                 }
                 else{
                     result= arg1 / arg2;
@@ -58,13 +59,15 @@ public class Task3 {
         String tempStringMark = str.replaceAll("[1234567890=]", " ");
         tempStringMark=tempStringMark.substring(1);
         String []markString=tempStringMark.split(" ");
-        // System.out.println(Arrays.toString(markString));
+ 
         double arg1 = Double.parseDouble(tempString[0]);
         double arg2 = Double.parseDouble(tempString[1]);
         String mark = markString[0];
         calculation(arg1,arg2,mark,myStack);
-        // System.out.println(myStack.get(0));
-        if (tempString.length >2){
+        if (myStack.peek() == null){
+            return null;
+        }
+        else if (tempString.length >2){
 
         
         int StackIndex=0;
