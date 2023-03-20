@@ -80,7 +80,7 @@ public class Task3 {
                 calculation(arg1,arg2,mark,myStack);
             }
             else {
-                return null;
+                return str;
                 }
             }
         }
@@ -93,7 +93,7 @@ public class Task3 {
         System.out.println("");
        
 
-        return null;
+        return str;
 
     }
     static String deleteLastAction(Stack<Double> myStack)throws IOException{
@@ -106,7 +106,7 @@ public class Task3 {
         else {
             System.out.println("Последнее действие - единственное, его нельзя удалить");
         }
-        return null;
+        return "";
     }
     public static void main(String[] args) throws IOException{
         // В калькулятор добавьте возможность отменить последнюю операцию 
