@@ -8,7 +8,7 @@ import java.util.Collections;
 public class HW5app2 {
 
     public static Map<String, String> listOfEmploee = new HashMap<>();
-    public static Set<String> names = new HashSet<>();;
+    public static Set<String> names = new HashSet<>();
     public static Map<String, Integer> countNames = new HashMap<>();
     public static void addInList() {
         listOfEmploee.put("Иванов","Иван");
