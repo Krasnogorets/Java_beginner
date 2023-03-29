@@ -1,6 +1,4 @@
-import java.security.Key;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -22,8 +20,6 @@ public class HWfinal {
     public static String[] tempArr = new String[0];
     public static Integer [] tempArrInt = new Integer[0];
     public static List<Float> tempArrFloat = new ArrayList<Float>();
-    // public static Float [] tempArrFloat = new Float[0];
-
 
     public static void fillTheNotebooks() {
         Notebook notebook1 = new Notebook();
@@ -137,6 +133,7 @@ public class HWfinal {
                 filter.put("price", String.valueOf(maxPrice));
                 System.out.println("Фильтр для поиска: " + filter);
                 numList.clear();
+
                 break;
             case 2:
                 tempList.clear();
@@ -319,7 +316,6 @@ public class HWfinal {
             default:
                 break;
         }
-        // iScan.close();
     }
 
     public static void getData() {

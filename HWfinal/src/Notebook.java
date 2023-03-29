@@ -46,19 +46,7 @@ public class Notebook {
     public void setColor(String color) {
         this.color = color;
     }
-//     public void set(int id, int price, String manufacturerName, String processorName, int memorySize, Float weight,
-//     String typeOfHdd, int sizeOfHdd, String nameOs, String color) {
-//         this.price = price;
-//         this.manufacturerName = manufacturerName;
-//         this.processorName = processorName;
-//         this.memorySize = memorySize;
-//         this.weight = weight;
-//         this.typeOfHdd = typeOfHdd;
-//         this.sizeOfHdd = sizeOfHdd;
-//         this.nameOs = nameOs;
-//         this.color = color;
-//         this.id = id;
-// }
+
     public void set(int price, String manufacturerName, String processorName, int memorySize, Float weight,
             String typeOfHdd, int sizeOfHdd, String nameOs, String color) {
         this.price = price;
@@ -130,9 +118,7 @@ public class Notebook {
         this.price = price;
         this.manufacturerName = manufacturerName;
     }
-    // public int getId() {
-    //     return id;
-    // }
+
     public int getPrice() {
         return price;
     }
@@ -162,19 +148,7 @@ public class Notebook {
     public String getColor() {
         return color;
     }
-    // public void get(int id, int price, String manufacturerName, String processorName, int memorySize, Float weight,
-    //         String typeOfHdd, int sizeOfHdd, String nameOs, String color) {
-    //     this.price = price;
-    //     this.manufacturerName = manufacturerName;
-    //     this.processorName = processorName;
-    //     this.memorySize = memorySize;
-    //     this.weight = weight;
-    //     this.typeOfHdd = typeOfHdd;
-    //     this.sizeOfHdd = sizeOfHdd;
-    //     this.nameOs = nameOs;
-    //     this.color = color;
-    //     this.id=id;
-    // }
+
     public void get(int price, String manufacturerName, String processorName, int memorySize, Float weight,
             String typeOfHdd, int sizeOfHdd, String nameOs, String color) {
         this.price = price;
@@ -248,7 +222,6 @@ public class Notebook {
         if (o == null || getClass() != o.getClass())
             return false;
         Notebook notebook =(Notebook) o;
-        // return Objects.equals(id, notebook.id) && Objects.equals(price, notebook.price) 
         return Objects.equals(price, notebook.price) 
                 && Objects.equals(manufacturerName, notebook.manufacturerName)
                  && Objects.equals(processorName, notebook.processorName) && Objects.equals(memorySize, notebook.memorySize) 
@@ -262,9 +235,7 @@ public class Notebook {
                             typeOfHdd,sizeOfHdd,nameOs,color);
     }
     @Override
-    // public String toString(int price, String manufacturerName, String
-    // processorName, int memorySize, Float weight,
-    // String typeOfHdd, int sizeOfHdd)
+
     public String toString() {
         return "\n Цена : " + price + " Произв. : " + manufacturerName +
                 " Произв. Процессора : " + processorName + " Размер ОЗУ : " + memorySize + " Гб" +
